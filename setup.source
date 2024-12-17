@@ -1,0 +1,16 @@
+PATH=/c/usr/Python3:/c/Users/gusch/.cargo/bin:$PATH
+
+function pip() {
+	python -m pip "$@"
+}
+
+alias python3=python
+alias pip3=pip
+
+for script in private/*.source ; do
+    source "$script"
+done
+
+export ZEROX_PROMPT_FILE=prompt
+export ZEROX_MODEL=gemini/gemini-1.5-flash
+source /c/usr/msvc/setup*.source

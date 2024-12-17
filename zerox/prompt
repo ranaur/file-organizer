@@ -1,0 +1,46 @@
+Return only the YAML with no explanation text.
+Convert the following PDF page to YAML file. It is a brazilian tax note.
+Fill at least the following fields:
+* Número da nota
+* Data e Hora da emissão
+* Códico de verificação
+* Prestador:
+	* CPF/CNPJ
+	* Inscrição Municipal
+	* Inscrição Estadual
+	* Nome/Razão Social do Prestador
+	* Nome Fantasia
+	* Telefone
+	* Endereço
+	* Município
+	* UF
+	* E-mail
+* Tomador de Serviços:
+	* CPF/CNPJ
+	* Inscrição Municipal
+	* Inscrição Estadual
+	* Nome/Razão Social do Prestador
+	* Telefone
+	* Endereço
+	* Município
+	* UF
+	* E-mail
+* Discriminação dos Serviços
+* Valor da Nota.
+* Serviço prestado
+* Detalhamento dos Impostos:
+	Deduções
+	Desconto Incondicional
+	Base de Cálculo
+	Alíquota
+	Valor do ISS
+	Crédito p/ IPTU
+* Outras Informações
+Do not exclude any content from the page.
+After the fields add the following fields based on the note:
+* Beneficiary: the first name of the service taker
+* Category: type of the service, it must be one of the following categories: Fisioterapia, Consultas Médicas, Psicoterapia, Exames e Outros
+* Sessions dates: list the dates where the service was done. Get this info from "Descriminação dos Serviços" field or, if there is no dates explicitly metioned use the Emission Date.
+* Number of sessions: get it from the number of dates from "Session dates" field
+* Price per session: divide the note value from the number of sessions
+* Certainty: from 0 to 10 how much are you certain of the information provided
